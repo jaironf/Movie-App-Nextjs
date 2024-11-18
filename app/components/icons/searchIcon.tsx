@@ -1,11 +1,5 @@
-import React, {FC, SVGProps} from "react";
-
-
-type SVGprops = SVGProps<SVGSVGElement>
-
-interface SVGIcon extends SVGprops {
-    size?: number
-}
+import React, {FC} from "react";
+import { SVGIcon } from "@/app/types";
 
 
 export const SearchIcon: FC<SVGIcon> = ({
