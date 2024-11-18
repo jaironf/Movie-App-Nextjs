@@ -1,13 +1,18 @@
+'use client'
+
 import React, { FC, PropsWithChildren } from "react";
-import {NextUIProvider} from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 
 
-const Providers: FC<PropsWithChildren> = ({children}) => {
+const Providers: FC<PropsWithChildren> = ({ children }) => {
   return (
     <NextUIProvider>
-    {children}
-  </NextUIProvider>
+      <NextThemesProvider attribute="class" defaultTheme="dark">
+        {children}
+      </NextThemesProvider>
+    </NextUIProvider>
   )
 }
 
