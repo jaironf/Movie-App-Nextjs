@@ -20,19 +20,19 @@ const Header = () => {
     <NavbarContent className='hidden sm:flex gap-3' justify='center'>
         <NavbarItem>
           <Link color='foreground' href='#'>
-            Features
+            Movies
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link href='#' aria-current='page' color='secondary'>
-            Customers
+            Categories
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link color='foreground' href='#'>
             Integrations
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
 
     <NavbarContent as='div' className='items-center' justify='center'>

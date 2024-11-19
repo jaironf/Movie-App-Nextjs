@@ -41,7 +41,7 @@ const WelcomeScreen: FC<WelcomeScreenProps> = ({ movies }) => {
       </CardHeader>
       <Image
         removeWrapper
-        alt="Relaxing app background"
+        alt="Movie background"
         className="z-0 w-full h-full object-cover"
         src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path}`}
       />

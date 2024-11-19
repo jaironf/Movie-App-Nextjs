@@ -30,7 +30,7 @@ export default async function Home() {
 
   const { results, page, total_pages, total_results } = data
 
-console.log(data);
+// console.log(data);
 const movies: Movie[] = data.results;
 
   return (
