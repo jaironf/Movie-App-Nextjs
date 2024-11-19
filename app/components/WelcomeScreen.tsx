@@ -29,11 +29,12 @@ const WelcomeScreen: FC<WelcomeScreenProps> = ({ movies }) => {
     }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-black">
+    <div className="w-full h-screen flex items-center justify-center">
       <Card isFooterBlurred className="w-[100%] h-[80%] relative">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
-        <h4 className="text-tiny text-white/60 uppercase font-bold text-xl">{currentMovie.release_date}</h4>
+        <h4 className="text-white/60 uppercase font-bold text-xl">{currentMovie.release_date}</h4>
         <h1 className="text-white/90 font-medium text-6xl">{currentMovie.title}</h1>
+        <br/>
         <div className="w-80 h-auto bg-black/30 backdrop-blur-sm p-4 rounded-md text-white">
   <p className="text-sm">{currentMovie.overview}</p>
 </div>
