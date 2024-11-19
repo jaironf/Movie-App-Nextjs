@@ -14,7 +14,7 @@ const Header = () => {
     <Navbar isBordered maxWidth='xl'>
     <NavbarContent justify='start'>
       <NavbarBrand className='mr-4'>
-        <p className='hidden sm:block font-bold text-inherit'>Streamify</p>
+        <p className='hidden sm:block font-bold text-inherit'>FilmApp</p>
       </NavbarBrand>
     </NavbarContent>
     <NavbarContent className='hidden sm:flex gap-3' justify='center'>
