@@ -30,3 +30,7 @@ interface Movies {
     vote_average: number;
     vote_count: number;
   }
+
+  interface MovieCard {
+    movies: Movies
+  }
