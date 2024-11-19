@@ -1,5 +1,7 @@
 import { Card, CardFooter, Image, Button, useDisclosure } from "@nextui-org/react";
 import { Movies } from "./types";
+import { Movie } from "./types";
+import WelcomeScreen from "./components/WelcomeScreen";
 
 
 export default async function Home() {
@@ -29,10 +31,11 @@ export default async function Home() {
   const { results, page, total_pages, total_results } = data
 
 console.log(data);
-
+const movies: Movie[] = data.results;
 
   return (
     <main className="md:container mx-auto pt-5">
+      <WelcomeScreen movies={movies}/>
       <div >
         <p>Aquí va la categoria de peli</p>
         </div>
