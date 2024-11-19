@@ -2,36 +2,19 @@ import { Card, CardFooter, Image, Button, useDisclosure } from "@nextui-org/reac
 import { Movies } from "./types";
 import { Movie } from "./types";
 import WelcomeScreen from "./components/WelcomeScreen";
+import apiFetch from "./lib/apiFetch";
 
 
 export default async function Home() {
 
   const baseURL = process.env.BASE_URL
-  const apiUrl = process.env.API_URL;
-  const authorization = process.env.AUTHORIZATION;
-  
 
+  const getMovies = await apiFetch.getMovies()
 
-  if (!apiUrl || !authorization) {
-    throw new Error("Variables de entorno no definidas correctamente.");
-  }
-
-  const getMovies = await fetch(apiUrl, {
-    headers: {
-      Authorization: authorization,
-    },
-  });
-
-  if (!getMovies.ok) {
-    throw new Error("Error al obtener datos de la API");
-  }
-
-  const data: Movies = await getMovies.json();
-
-  const { results, page, total_pages, total_results } = data
+  const { results, page, total_pages, total_results } = getMovies
 
 // console.log(data);
-const movies: Movie[] = data.results;
+const movies: Movie[] = getMovies.results;
 
   return (
     <main className="md:container mx-auto pt-5">
