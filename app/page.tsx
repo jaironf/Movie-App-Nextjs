@@ -1,12 +1,12 @@
-import { Movie } from "./types";
+import { FC } from "react";
 import apiFetch from "./lib/apiFetch";
+import { Movie, ServerParams } from "./types";
 import WelcomeScreen from "./components/WelcomeScreen";
 import MovieCards from "./components/MovieCards";
 
+const Home: FC<ServerParams> = async ({ searchParams }) => {
 
-export default async function Home() {
-
- const getMovies = await apiFetch.getMovies()
+ const getMovies = await apiFetch.getMovies({ searchParams })
 
 const movies: Movie[] = getMovies.results;
 
@@ -17,3 +17,5 @@ const movies: Movie[] = getMovies.results;
     </main>
   );
 }
+
+export default Home

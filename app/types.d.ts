@@ -34,3 +34,12 @@ interface Movies {
   interface MovieCard {
     movies: Movies
   }
+
+
+  interface movieParams {
+    query: string
+  }
+
+  interface ServerParams {
+    searchParams: movieParams
+  }

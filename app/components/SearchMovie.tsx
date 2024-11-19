@@ -3,7 +3,7 @@
 import { Input } from '@nextui-org/react'
 import { SearchIcon } from './icons/searchIcon'
 import { useSearchParams, useRouter } from 'next/navigation'
-
+import { useDebouncedCallback } from 'use-debounce' 
 
 const SearchMovie = () => {
 
@@ -11,7 +11,7 @@ const SearchMovie = () => {
     const { replace } = useRouter();
 
 
-    const handleOnChange = (value: string) => {
+    const handleOnChange = useDebouncedCallback((value: string) => {
         const params = new URLSearchParams(searchParams)
 
         if (value) {
@@ -20,7 +20,7 @@ const SearchMovie = () => {
             params.delete('query')
         }
         replace(`/?${params.toString()}`)
-    }
+    }, 600)
 
   return (
     <Input
