@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { MovieCard } from '../types'
-import { Card, CardFooter, Image, Button, useDisclosure } from "@nextui-org/react";
+import { Card, CardFooter, Image, Button, useDisclosure, Modal, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/react";
 import Link from 'next/link';
 
 
@@ -8,8 +8,9 @@ import Link from 'next/link';
 const MovieCards: FC<MovieCard> = ({ movies }) => {
 
     const baseURL = process.env.BASE_URL
-
     const { results } = movies
+
+
     return (
         <main>
             <div >
