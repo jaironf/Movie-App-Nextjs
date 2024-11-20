@@ -1,6 +1,6 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { MovieCard } from '../types'
-import { Card, CardFooter, Image, Button, useDisclosure, Modal, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/react";
+import { Card, CardFooter, Image } from "@nextui-org/react";
 import Link from 'next/link';
 import MovieModal from './MovieModal';
 
@@ -13,9 +13,6 @@ const MovieCards: FC<MovieCard> = ({ movies }) => {
 
     return (
         <main>
-            <div >
-                <p>Aquí va la categoria de peli</p>
-            </div>
             <div className="md:grid md:grid-cols-4 gap-5 pt-5 mb-10">
                 {/* Truco para ver como renderiza cuando hay varias cards */}
                 {results.length > 0 && results.map(data =>
@@ -37,9 +34,6 @@ const MovieCards: FC<MovieCard> = ({ movies }) => {
                                     <p className="text-medium text-white/80 font-bold">{data.title}</p>
                                     <p className="text-tiny text-white/80 font-bold">Popularity: {data.popularity}</p>
                                 </div>
-                                {/* <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
-                                    Play
-                                </Button> */}
                                 <MovieModal movieTitle={data.title} movieDescription={data.overview} />
                             </CardFooter>
                         </Card>
