@@ -32,7 +32,7 @@ interface MovieModalProps {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader>{movieTitle || "Movie Details"}</ModalHeader>
+              <ModalHeader className="text-3xl">{movieTitle || "Movie Details"}</ModalHeader>
               <ModalBody>
                 <p>{movieDescription || "No description available."}</p>
               </ModalBody>
