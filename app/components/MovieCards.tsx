@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { MovieCard } from '../types'
 import { Card, CardFooter, Image, Button, useDisclosure, Modal, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/react";
 import Link from 'next/link';
-
+import MovieModal from './MovieModal';
 
 
 const MovieCards: FC<MovieCard> = ({ movies }) => {
@@ -19,11 +19,11 @@ const MovieCards: FC<MovieCard> = ({ movies }) => {
             <div className="md:grid md:grid-cols-4 gap-5 pt-5 mb-10">
                 {/* Truco para ver como renderiza cuando hay varias cards */}
                 {results.length > 0 && results.map(data =>
-                    <Link href={`/movie/${data.id}`} key={data.id}>
+                    // <Link href={`/movie/${data.id}`} key={data.id}>
                         <Card
                             isFooterBlurred
                             radius="lg"
-                            className="border-none transition ease-in-out delay-13 hover:-translate-y-px hover:scale-110 hover:opacity-60 duration-300 cursor-pointer"
+                            className="border-none transition ease-in-out delay-13 hover:-translate-y-px hover:scale-110 hover:opacity-90 duration-300 cursor-pointer"
                         >
                             <Image
                                 alt="Woman listing to music"
@@ -37,12 +37,13 @@ const MovieCards: FC<MovieCard> = ({ movies }) => {
                                     <p className="text-medium text-white/80 font-bold">{data.title}</p>
                                     <p className="text-tiny text-white/80 font-bold">Popularity: {data.popularity}</p>
                                 </div>
-                                <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
+                                {/* <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
                                     Play
-                                </Button>
+                                </Button> */}
+                                <MovieModal movieTitle={data.title} movieDescription={data.overview} />
                             </CardFooter>
                         </Card>
-                    </Link>
+                    // </Link>
                 )}
             </div>
         </main>
