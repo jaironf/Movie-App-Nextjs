@@ -1,24 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movie App Project
 
-## Getting Started
+A React-based movie app that allows users to view movie details, including title, description, release date, popularity, and an image. The project uses Next.js, NextUI, and React to deliver an interactive and dynamic UI.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Movie List**: Display a list of movies fetched from an API.
+- **Movie Modal**: View detailed information about a specific movie, including title, description, release date, popularity, and an image.
+- **Modal with Backdrop**: The modal includes a blurred backdrop when opened for better focus on the content.
+- **Responsive Design**: The app is fully responsive and works well on different screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **React**: Front-end library for building the user interface.
+- **Next.js**: Framework for server-side rendering, routing, and API calls.
+- **NextUI**: UI component library to create modern, customizable components (like buttons, modals, etc.).
+- **TypeScript**: Type-safe programming language for better maintainability and fewer runtime errors.
+- **Tailwind CSS**: For custom styling and responsiveness.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup Instructions
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/jaironf/Movie-App-Nextjs.git
+    cd movie-app
+    ```
+
+2. **Install Dependencies**:
+    Make sure you have [Node.js](https://nodejs.org/) installed. Then, install the necessary dependencies:
+    ```bash
+    npm install
+    ```
+
+3. **Run the Development Server**:
+    Start the development server using the following command:
+    ```bash
+    npm run dev
+    ```
+    The app should now be accessible at `http://localhost:3000`.
+
+## Usage
+
+- **Viewing Movie Details**: Click on the "View Details" button for a movie to open the modal, which will display the movie's title and description.
+- **Modal Backdrop**: The modal backdrop is set to a blur effect when opened, helping focus the user's attention on the modal content.
+
 
 ## Learn More
 

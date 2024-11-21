@@ -96,3 +96,11 @@ interface Movies {
     id: number;
     name: string;
   }
+
+  interface MovieModalProps {
+    movie: {
+      title: string;
+      overview: string;
+      imageUrl: string;
+    };
+  }
