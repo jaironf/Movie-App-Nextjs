@@ -5,7 +5,7 @@ A React-based movie app that allows users to view movie details, including title
 ## Features
 
 - **Movie List**: Display a list of movies fetched from TheMovieDB API.
-- **Movie Modal**: View detailed information about a specific movie, including title, description, and an image.
+- **Movie Information**: View detailed information about a specific movie, including title, description, and an image.
 - **Modal with Backdrop**: The modal includes a blurred backdrop when opened for better focus on the content.
 - **Responsive Design**: The app is fully responsive and works well on different screen sizes.
 - **Pagination**: Users can navigate through different pages of movie results using the pagination component.
