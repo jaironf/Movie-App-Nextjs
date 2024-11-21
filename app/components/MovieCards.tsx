@@ -43,7 +43,7 @@ const MovieCards: FC<MovieCard> = ({ movies }) => {
                             />                            
                             </CardFooter>
                     </Card>
-                    // </Link>
+                    //  </Link>
                 )}
             </div>
         </main>

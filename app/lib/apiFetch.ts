@@ -21,6 +21,10 @@ const apiFetch: APIFetch = {
         const buildURL = new URL(`${API_URL}`)
         const buildParams = new URLSearchParams('')
 
+        if(searchParams.page) {
+            buildParams.set('page', searchParams.page)
+        }
+
         if(searchParams.query) {
             buildParams.set('query', searchParams.query)
             buildURL.pathname = buildURL.pathname + '/search/movie'
