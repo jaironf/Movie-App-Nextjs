@@ -38,6 +38,7 @@ interface Movies {
 
   interface movieParams {
     query: string
+    page: string
   }
 
   interface ServerParams {

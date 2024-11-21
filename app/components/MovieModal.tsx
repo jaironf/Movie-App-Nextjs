@@ -6,7 +6,6 @@ import { MovieModalProps } from "../types";
 
 
 
-
 const MovieModal: FC<MovieModalProps> = ({ movie }) => {
 
 
