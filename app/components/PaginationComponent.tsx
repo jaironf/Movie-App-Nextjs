@@ -13,7 +13,7 @@ const PaginationComponent = () => {
     }
 
   return (
-    <Pagination showControls total={10} initialPage={1} onChange={handleOnChange}/>
+    <Pagination showControls color='danger' total={10} initialPage={1} onChange={handleOnChange}/>
   )
 }
 
