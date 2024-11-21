@@ -18,7 +18,7 @@ const Header = () => {
     <NavbarContent className='hidden sm:flex gap-3' justify='center'>
         <NavbarItem>
           <Link color='danger' href='/'>
-            Main Page
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>

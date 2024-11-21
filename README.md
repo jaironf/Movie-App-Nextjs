@@ -1,13 +1,17 @@
-# Movie App Project
+# 🎥 Movie App Project 🎬 🍿
 
 A React-based movie app that allows users to view movie details, including title, description, release date, popularity, and an image. The project uses Next.js, NextUI, and React to deliver an interactive and dynamic UI.
 
 ## Features
 
-- **Movie List**: Display a list of movies fetched from an API.
-- **Movie Modal**: View detailed information about a specific movie, including title, description, release date, popularity, and an image.
+- **Movie List**: Display a list of movies fetched from TheMovieDB API.
+- **Movie Modal**: View detailed information about a specific movie, including title, description, and an image.
 - **Modal with Backdrop**: The modal includes a blurred backdrop when opened for better focus on the content.
 - **Responsive Design**: The app is fully responsive and works well on different screen sizes.
+- **Pagination**: Users can navigate through different pages of movie results using the pagination component.
+- **Search Functionality**: Users can search for movies by title and see relevant results.
+- **Dark/Light Mode Toggle**: Users can switch between dark and light themes, allowing them to customize the appearance based on their preference.
+
 
 ## Technologies Used
 
@@ -16,6 +20,17 @@ A React-based movie app that allows users to view movie details, including title
 - **NextUI**: UI component library to create modern, customizable components (like buttons, modals, etc.).
 - **TypeScript**: Type-safe programming language for better maintainability and fewer runtime errors.
 - **Tailwind CSS**: For custom styling and responsiveness.
+- **Fetch API**: To make HTTP requests to the movie API.
+
+## App Images
+
+<img src='./app/assets/Images/Pagina-Inicio.png' alt='Home Page' width='700px' /> 
+<img src='./app/assets/Images/Lista-pelis.png' alt='Home Page' width='700px' /> 
+<img src='./app/assets/Images/Detalle-pelis.png' alt='Home Page' width='700px' /> 
+<img src='./app/assets/Images/Paginación.png' alt='Home Page' width='700px' /> 
+<img src='./app/assets/Images/Modo-light.png' alt='Home Page' width='700px' /> 
+
+
 
 ## Setup Instructions
 
